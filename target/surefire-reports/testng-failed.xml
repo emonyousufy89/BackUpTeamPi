@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" configfailurepolicy="continue" verbose="0" name="Failed suite [BDD Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="Reporterutils.TestListenerImpl"/>
+  </listeners>
+  <test thread-count="1" verbose="0" name="Team Pi Presentation(failed)" parallel="tests">
+    <classes>
+      <class name="Runner.TestRunner">
+        <methods>
+          <include name="feature" invocation-numbers="0 1 2 3"/>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- Runner.TestRunner -->
+    </classes>
+  </test> <!-- Team Pi Presentation(failed) -->
+</suite> <!-- Failed suite [BDD Test Suite] -->
