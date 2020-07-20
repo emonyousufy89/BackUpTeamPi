@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="BDD Test Suite" duration-ms="958" started-at="2020-07-18T17:43:02 EDT" finished-at="2020-07-18T17:43:03 EDT">
+  <suite name="BDD Test Suite" duration-ms="1662" started-at="2020-07-19T22:52:13 EDT" finished-at="2020-07-19T22:52:15 EDT">
     <groups>
       <group name="cucumber">
         <method signature="TestRunner.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" class="Runner.TestRunner"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Team Pi Presentation" duration-ms="958" started-at="2020-07-18T17:43:02 EDT" finished-at="2020-07-18T17:43:03 EDT">
+    <test name="Team Pi Presentation" duration-ms="1662" started-at="2020-07-19T22:52:13 EDT" finished-at="2020-07-19T22:52:15 EDT">
       <class name="Runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.TestRunner@3abbfa04]" name="setUpClass" is-config="true" duration-ms="240" started-at="2020-07-18T17:43:02 EDT" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:Runner.TestRunner@3abbfa04]" name="setUpClass" is-config="true" duration-ms="348" started-at="2020-07-19T22:52:14 EDT" finished-at="2020-07-19T22:52:14 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="206" started-at="2020-07-18T17:43:03 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="449" started-at="2020-07-19T22:52:14 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-19T22:52:15 EDT">
           <params>
             <param index="0">
               <value>
@@ -54,11 +54,8 @@ at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:114
 at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy18.click(Unknown Source)
-at Actions.SignInActions.clickloginlink(SignInActions.java:19)
-at StepDefinations.SignInSteps.customer_clicks_on_Hello_Sign_In_button(SignInSteps.java:21)
+at Reporterutils.ExtentReportListner.captureScreenShot(ExtentReportListner.java:84)
+at StepDefinations.SignInSteps.customer_clicks_on_Hello_Sign_In_button(SignInSteps.java:41)
 at ✽.Given Customer clicks on Hello Sign In button(AmazonLogin.feature:9)
 ]]>
             </full-stacktrace>
@@ -66,7 +63,7 @@ at ✽.Given Customer clicks on Hello Sign In button(AmazonLogin.feature:9)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="18" started-at="2020-07-18T17:43:03 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="25" started-at="2020-07-19T22:52:15 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-19T22:52:15 EDT">
           <params>
             <param index="0">
               <value>
@@ -106,11 +103,8 @@ at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:114
 at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy18.click(Unknown Source)
-at Actions.SignUpActions.clickSignInlink(SignUpActions.java:20)
-at StepDefinations.SignUpSteps.customer_clicks_in_the_signIn_button(SignUpSteps.java:16)
+at Reporterutils.ExtentReportListner.captureScreenShot(ExtentReportListner.java:84)
+at StepDefinations.SignUpSteps.customer_clicks_in_the_signIn_button(SignUpSteps.java:41)
 at ✽.Given Customer clicks in the signIn button(AmazonSignUp.feature:9)
 ]]>
             </full-stacktrace>
@@ -118,7 +112,7 @@ at ✽.Given Customer clicks in the signIn button(AmazonSignUp.feature:9)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="60" started-at="2020-07-18T17:43:03 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="133" started-at="2020-07-19T22:52:15 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-19T22:52:15 EDT">
           <params>
             <param index="0">
               <value>
@@ -182,7 +176,7 @@ at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:105)
 at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:72)
 at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
 at Actions.BooksAction.<init>(BooksAction.java:15)
-at StepDefinations.BooksSteps.<init>(BooksSteps.java:11)
+at StepDefinations.BooksSteps.<init>(BooksSteps.java:21)
 ... 38 more
 ]]>
             </full-stacktrace>
@@ -190,7 +184,7 @@ at StepDefinations.BooksSteps.<init>(BooksSteps.java:11)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="74" started-at="2020-07-18T17:43:03 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:Runner.TestRunner@3abbfa04]" name="feature" duration-ms="86" started-at="2020-07-19T22:52:15 EDT" description="Runs Cucumber Feature" data-provider="Features" finished-at="2020-07-19T22:52:15 EDT">
           <params>
             <param index="0">
               <value>
@@ -254,7 +248,7 @@ at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:105)
 at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:72)
 at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:46)
 at Actions.TelevisionActions.<init>(TelevisionActions.java:15)
-at StepDefinations.TelevisionSteps.<init>(TelevisionSteps.java:12)
+at StepDefinations.TelevisionSteps.<init>(TelevisionSteps.java:22)
 ... 38 more
 ]]>
             </full-stacktrace>
@@ -262,7 +256,7 @@ at StepDefinations.TelevisionSteps.<init>(TelevisionSteps.java:12)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@3abbfa04]" name="tearDownClass" is-config="true" duration-ms="38" started-at="2020-07-18T17:43:03 EDT" finished-at="2020-07-18T17:43:03 EDT">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runner.TestRunner@3abbfa04]" name="tearDownClass" is-config="true" duration-ms="48" started-at="2020-07-19T22:52:15 EDT" finished-at="2020-07-19T22:52:15 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

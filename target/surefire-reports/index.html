@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-BDD_Test_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" hash-for-method="feature(Sign Up into Amazon.com)">feature(Sign Up into Amazon.com)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" hash-for-method="feature(Book Shopping from amazon)">feature(Book Shopping from amazon)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -117,7 +117,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" hash-for-method="feature(Book Shopping from amazon)">feature(Book Shopping from amazon)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="Runner.TestRunner" hash-for-method="feature(Sign Up into Amazon.com)">feature(Sign Up into Amazon.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-BDD_Test_Suite -->
@@ -140,11 +140,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Sign Up into Amazon.com)">
-                  </a> <!-- feature(Sign Up into Amazon.com) -->
+                  <a name="feature(Book Shopping from amazon)">
+                  </a> <!-- feature(Book Shopping from amazon) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Sign Up into Amazon.com)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.NullPointerException
+                  <span class="parameters">(Book Shopping from amazon)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: cucumber.runtime.CucumberException: Failed to instantiate class StepDefinations.BooksSteps
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at Runner.TestRunner.feature(TestRunner.java:37)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
@@ -152,14 +152,29 @@
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+Caused by: cucumber.runtime.CucumberException: Failed to instantiate class StepDefinations.BooksSteps
+	at cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:47)
+	at cucumber.runtime.java.DefaultJavaObjectFactory.getInstance(DefaultJavaObjectFactory.java:33)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	... 24 more
+	at cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:41)
+	... 33 more
 Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at Actions.SignUpActions.clickSignInlink(SignUpActions.java:20)
-	at StepDefinations.SignUpSteps.customer_clicks_in_the_signIn_button(SignUpSteps.java:16)
-	at ✽.Given Customer clicks in the signIn button(AmazonSignUp.feature:9)
-... Removed 18 stack frames
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:105)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
+	at Actions.BooksAction.&lt;init&gt;(BooksAction.java:15)
+	at StepDefinations.BooksSteps.&lt;init&gt;(BooksSteps.java:21)
+	... 38 more
+... Removed 23 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
@@ -199,7 +214,7 @@ Caused by: java.lang.NullPointerException
 	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
 	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
 	at Actions.TelevisionActions.&lt;init&gt;(TelevisionActions.java:15)
-	at StepDefinations.TelevisionSteps.&lt;init&gt;(TelevisionSteps.java:12)
+	at StepDefinations.TelevisionSteps.&lt;init&gt;(TelevisionSteps.java:22)
 	... 38 more
 ... Removed 23 stack frames
 </div> <!-- stack-trace -->
@@ -222,11 +237,8 @@ Caused by: java.lang.NullPointerException
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
 Caused by: java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at Actions.SignInActions.clickloginlink(SignInActions.java:19)
-	at StepDefinations.SignInSteps.customer_clicks_on_Hello_Sign_In_button(SignInSteps.java:21)
+	at Reporterutils.ExtentReportListner.captureScreenShot(ExtentReportListner.java:84)
+	at StepDefinations.SignInSteps.customer_clicks_on_Hello_Sign_In_button(SignInSteps.java:41)
 	at ✽.Given Customer clicks on Hello Sign In button(AmazonLogin.feature:9)
 ... Removed 18 stack frames
 </div> <!-- stack-trace -->
@@ -236,11 +248,11 @@ Caused by: java.lang.NullPointerException
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Book Shopping from amazon)">
-                  </a> <!-- feature(Book Shopping from amazon) -->
+                  <a name="feature(Sign Up into Amazon.com)">
+                  </a> <!-- feature(Sign Up into Amazon.com) -->
                   <span class="method-name">feature</span>
-                  <span class="parameters">(Book Shopping from amazon)</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: cucumber.runtime.CucumberException: Failed to instantiate class StepDefinations.BooksSteps
+                  <span class="parameters">(Sign Up into Amazon.com)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.NullPointerException
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at Runner.TestRunner.feature(TestRunner.java:37)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
@@ -248,29 +260,11 @@ Caused by: java.lang.NullPointerException
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-Caused by: cucumber.runtime.CucumberException: Failed to instantiate class StepDefinations.BooksSteps
-	at cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:47)
-	at cucumber.runtime.java.DefaultJavaObjectFactory.getInstance(DefaultJavaObjectFactory.java:33)
-	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
-	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
-	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
-	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
-	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	... 24 more
-	at cucumber.runtime.java.DefaultJavaObjectFactory.cacheNewInstance(DefaultJavaObjectFactory.java:41)
-	... 33 more
 Caused by: java.lang.NullPointerException
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:882)
-	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:105)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:72)
-	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:46)
-	at Actions.BooksAction.&lt;init&gt;(BooksAction.java:15)
-	at StepDefinations.BooksSteps.&lt;init&gt;(BooksSteps.java:11)
-	... 38 more
-... Removed 23 stack frames
+	at Reporterutils.ExtentReportListner.captureScreenShot(ExtentReportListner.java:84)
+	at StepDefinations.SignUpSteps.customer_clicks_in_the_signIn_button(SignUpSteps.java:41)
+	at ✽.Given Customer clicks in the signIn button(AmazonSignUp.feature:9)
+... Removed 18 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
@@ -345,24 +339,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'Runner.TestRunner')
-data.setCell(0, 3, 206);
+data.setCell(0, 3, 449);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'feature')
 data.setCell(1, 2, 'Runner.TestRunner')
-data.setCell(1, 3, 74);
+data.setCell(1, 3, 133);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'feature')
 data.setCell(2, 2, 'Runner.TestRunner')
-data.setCell(2, 3, 60);
+data.setCell(2, 3, 86);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'feature')
 data.setCell(3, 2, 'Runner.TestRunner')
-data.setCell(3, 3, 18);
+data.setCell(3, 3, 25);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 958 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -397,29 +391,29 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(SignIn to Amazon.com)</span>
-                <span class="method-start">360 ms</span>
+                <span class="method-start">535 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Sign Up into Amazon.com)</span>
-                <span class="method-start">579 ms</span>
+                <span class="method-start">995 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Book Shopping from amazon)</span>
-                <span class="method-start">598 ms</span>
+                <span class="method-start">1021 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">feature(Electronics shopping)</span>
-                <span class="method-start">659 ms</span>
+                <span class="method-start">1156 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">738 ms</span>
+                <span class="method-start">1244 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
